@@ -26,4 +26,9 @@ describe("基本类型", () => {
         }
         expect(hasFunctionObj.isMember(200)).toBeTrue()
     })
+
+    test("数组", () => {
+        const arr = ["a", "b", "c", "d"]
+        expect(arr).toHaveLength(4)
+    })
 })
