@@ -55,18 +55,33 @@ describe("练习题", () => {
 
         class MyDate {
             times: number
-            keywords: string
+            keyword: string
             constructor(_times: number, _keyword: string) {
                 this.times = _times
-                this.keywords = _keyword
+                this.keyword = _keyword
             }
         }
-        const result: MyDate[] = strTest.toLowerCase().split(" ")
-            .filter(item => item == "a" || item == "is").map((value, i) => new MyDate(i, value))
+        const result = strTest.toLowerCase().split(" ")
+            .filter(item => item == "a" || item == "is")
+            .reduce((previousValue, currentValue) => {
+                if (previousValue.length == 0) {
+                    previousValue.push(
+                        new MyDate(1, currentValue)
+                    )
+                } else {
+                    const temp = previousValue.filter(x => x.keyword == currentValue)
+                    if (temp.length == 1) {
+                        temp.map(x => x.times += 1)
+                    } else {
+                        previousValue.push(
+                            new MyDate(1, currentValue)
+                        )
+                    }
+                }
+                return previousValue
+            }, Array<MyDate>())
         console.log(result)
-
-
-
+        expect(result.length).toBe(2)
     })
     test("6", () => {
         const indexs = [1, 2, 3, 4, 5]
