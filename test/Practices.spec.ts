@@ -25,15 +25,18 @@ describe("练习题", () => {
         1,3,5,7,9 */
         expect(result).toBe(25)
     })
-    /* test("3", () => {
-        
-    }) */
+    test("3", () => {
+        const result = arr.filter(x => x % 2 == 0).reduce((x = 0, y) => x + y)
+        expect(result).toBe(30)
+    })
     test("4", () => {
         const result = _.range(1, 10).map(i =>
             _.range(1, i + 1)
                 .map(j => `${i}*${j}=${i * j}`)
                 .join(" ")
         ).join("\n")
+        console.log(result)
+
         expect(result).toBe(
             `1*1=1
 2*1=2 2*2=4
@@ -45,9 +48,26 @@ describe("练习题", () => {
 8*1=8 8*2=16 8*3=24 8*4=32 8*5=40 8*6=48 8*7=56 8*8=64
 9*1=9 9*2=18 9*3=27 9*4=36 9*5=45 9*6=54 9*7=63 9*8=72 9*9=81`)
     })
-    /* test("5", () => {
-        
-    }) */
+    test("5", () => {
+        type str = string
+
+        const strTest: str = "The simplest way to describe a function is with a function type expression."
+
+        class MyDate {
+            times: number
+            keywords: string
+            constructor(_times: number, _keyword: string) {
+                this.times = _times
+                this.keywords = _keyword
+            }
+        }
+        const result: MyDate[] = strTest.toLowerCase().split(" ")
+            .filter(item => item == "a" || item == "is").map((value, i) => new MyDate(i, value))
+        console.log(result)
+
+
+
+    })
     test("6", () => {
         const indexs = [1, 2, 3, 4, 5]
         const weekdays = ["周一", "周二", "周三", "周四", "周五"]
@@ -63,7 +83,9 @@ describe("练习题", () => {
         const result: MyDate[] = indexs.map(
             (value, i) => new MyDate(value, weekdays[i])
         )
+        console.log(result)
 
         expect(result[0].weekday).toBe("周一")
+
     })
 })
