@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .content {
+            display: flex;
+            width: 400px;
+            height: 500px;
+            background-color: pink;
+            border-radius: 5%;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .top{
+            display: flex;
+            width: 100%;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #000;
+            background-color: darkblue;
+            color: #fff;
+        }
+        .login-title{
+            width: 100%;
+            margin-left: 20px;
+        }
+        .login-pwd{
+            width: 100%;
+            margin: 0 20px;
+            margin-top: 60px;
+        }
+        .login-btn{
+            display: flex;
+            width: 100%;
+            height: 140px;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-tip{
+            display: flex;
+            width: 90%;
+            justify-content: space-between;
+        }
+        input {
+            width: 100%;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+            height: 25px;
+        }
+        button {
+            width: 65px;
+            height: 30px;
+            border: none;
+            border-radius: 30%;
+            background-color: deepskyblue;
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content ">
+        <div class="top ">
+            <div class="logo margin">Logo</div>
+        </div>
+        <div class="login-title">
+            <h2 class=" margin">Welcome back!</h2>
+            <p class=" margin">User Login</p>
+        </div>
+
+        <div class="login-pwd">
+            <p class="margin">Eamil</p>
+            <input type="text" class="margin margin-bottom">
+            <p class="margin">Password</p>
+            <input type="password" class="margin margin-bottom">
+        </div>
+
+        <div class="login-btn">
+            <button>Login</button>
+        </div>
+
+        <div class="login-tip">
+            <span class="margin">Forgot Password?</span>
+            <span class="margin">Register</span>
+        </div>
+    </div>
+</body>
+
+</html>
