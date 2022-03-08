@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            position: relative;
+            width: 400px;
+            margin: auto;
+        }
+
+        .content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, 20%);
+            width: 400px;
+            height: 500px;
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 5%;
+        }
+
+        .margin {
+            margin: 0 20px;
+        }
+
+        .margin-top {
+            margin-top: 10px;
+        }
+
+        .margin-bottom {
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #000;
+            background-color: darkblue;
+            color: #fff;
+
+        }
+
+        .top {
+            width: 100%;
+            display: flex;
+        }
+
+        .login-title {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .login-title h3 {
+            width: 100%;
+        }
+
+        .login-title p {
+            width: 100%;
+        }
+
+        .login-pwd {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .login-pwd p {
+            width: 100%;
+        }
+
+        .login-pwd input {
+            width: 100%;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: transparent;
+            height: 25px;
+        }
+
+        .login-btn button {
+            width: 65px;
+            height: 30px;
+            border: none;
+            border-radius: 30%;
+            background-color: deepskyblue;
+            color: #fff;
+            font-size: 16px;
+        }
+        .login-tip{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="content ">
+            <div class="top ">
+                <div class="logo margin">Logo</div>
+            </div>
+            <div class="login-title">
+                <h2 class=" margin">Welcome back!</h2>
+                <p class=" margin">User Login</p>
+            </div>
+
+            <div class="login-pwd">
+                <p class="margin">Eamil</p>
+                <input type="text" class="margin margin-bottom">
+                <p class="margin">Password</p>
+                <input type="password" class="margin margin-bottom">
+            </div>
+
+            <div class="login-btn">
+                <button>Login</button>
+            </div>
+
+            <div class="login-tip">
+                <span class="margin">Forgot Password?</span>
+                <span class="margin">Register</span>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

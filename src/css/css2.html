@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .all {
+            height: 593px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .top {
+            display: flex;
+            width: 970px;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        .top-left {
+            background-color: red;
+            width: 277px;
+            height: 103px;
+        }
+
+        .top-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .top-right1 {
+            background-color: green;
+            width: 679px;
+            height: 46px;
+        }
+
+        .top-right2 {
+            background-color: green;
+            width: 137px;
+            height: 49px;
+            align-self: flex-end;
+        }
+
+        .middle {
+            display: flex;
+            width: 970px;
+            justify-content: space-between;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+
+        .main-left {
+            background-color: yellow;
+            width: 310px;
+            height: 435px;
+        }
+
+        .main-middle {
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .main-middle-top {
+            width: 450px;
+            height: 240px;
+            background-color: skyblue;
+        }
+
+        .main-middle-middle {
+            width: 450px;
+            height: 110px;
+            background-color: skyblue;
+        }
+
+        .main-middle-bottom {
+            width: 450px;
+            height: 30px;
+            background-color: skyblue;
+        }
+
+        .main-right {
+            height: 401px;
+            width: 190px;
+            background-color: purple;
+        }
+
+        .main-bottom {
+            width: 650px;
+            height: 25px;
+            background-color: green;
+        }
+        .bottom{
+            margin: auto;
+            width: 970px;
+            height: 35px;
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <header>
+            <div class="top">
+                <div class="top-left"></div>
+                <div class="top-right">
+                    <div class="top-right2"></div>
+                    <div class="top-right1"></div>
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <div class="middle">
+                <div class="main-left"></div>
+                <div class="main-middle">
+                    <div class="main-middle-top"></div>
+                    <div class="main-middle-middle"></div>
+                    <div class="main-middle-bottom"></div>
+                    <div class="main-bottom"></div>
+
+                </div>
+                <div class="main-right"></div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="bottom"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -88,4 +88,79 @@ describe("练习题", () => {
         expect(result[0].weekday).toBe("周一")
 
     })
+
+    test("7", () => {
+        class Person {
+            username: string
+            constructor(username: string) {
+                this.username = username
+            }
+        }
+        const schoolemaster = new Person("老王")
+        // schoolemaster=new Person("小张")
+        console.log(schoolemaster)
+    })
+
+    test("8", () => {
+        const s1 = ["a", "b", "c"]
+        const s2 = [...s1]
+        s2[1] = "v"
+        console.log(s1, s2)
+
+        expect(s1).toBe(s2)
+    })
+
+    test("9", () => {
+        interface Animal {
+            name: string,
+            age: number,
+        }
+        const tom: Animal = {
+            name: "Dog",
+            age: 18,
+        }
+        expect(tom.name == "Dog")
+    })
+
+    test("10", () => {
+        interface Person {
+            name: string,
+            age: number,
+        }
+        const obj: Person = {
+            name: "小胡",
+            age: 18,
+        }
+        function fn(person: Person) {
+            return "Hello" + person.name
+        }
+
+        const hu = fn(obj)
+        console.log(hu)
+
+    })
+
+    test("只读属性", () => {
+        interface Person {
+            readonly resident: {
+                name: string,
+                age: number,
+            }
+        }
+        const obj: Person = {
+            resident:{
+                name: "小胡",
+                age: 18,
+            }
+        }
+        function fn(person: Person) {
+            console.log(`Happy birthday ${person.resident.name}`)
+            person.resident.age++
+            return "Hello" + person.resident.name+person.resident.age
+        }
+        const mi=fn(obj)
+        console.log(mi)
+        
+    })
+
 })
